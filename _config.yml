@@ -6,7 +6,7 @@ email: 1320854122@qq.com
 description: "Every failure is leading towards success."
 keyword: "BY, BY Blog, 陈志坤的博客, czkm, 陈志坤, js, JavaScript, vue"
 url: "http://czkm.github.io/"          # your host, for absolute URL
-baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: "/blog"      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "hhttps://github.com/czkm/czkm.github.io.git" # you code repository
 
 # Sidebar settings
@@ -74,7 +74,7 @@ gitalk:
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: b50bf2b12b5338a1845e33832976fd68
+# ba_track_id: b50bf2b12b5338a1845e33832976fd68
 
 # Google Analytics
 ga_track_id: 'UA-130631878-1'            # Format: UA-xxxxxx-xx
