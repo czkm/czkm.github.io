@@ -21,8 +21,8 @@ RSS: false
 # weibo_username:   czkm  
 zhihu_username:     cheng-zhi-tu-shen
 github_username:    czkm
-facebook_username:  czkm
-jianshu_username:   czkm
+# facebook_username:  czkm
+jianshu_username:   c7879e3f1e9b
 #twitter_username:   
 
 
@@ -99,14 +99,14 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "微信号",
-        href: "wjczk123"
+        title: "掘金",
+        href: "https://juejin.im/user/5bbf26e05188255c352d7edf/posts"
     },{
         title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
+        href: "https://www.jianshu.com/u/c7879e3f1e9bd"
     },{
-        title: "Apple",
-        href: "https://apple.com"
+        title: "vue",
+        href: "https://cn.vuejs.org/"
     },{
         title: "Apple Developer",
         href: "https://developer.apple.com/"
