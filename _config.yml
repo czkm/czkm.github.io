@@ -3,7 +3,7 @@ title: czkm blog
 SEOTitle: 陈志坤的博客 | BY Blog
 header-img: img/post-bg-desk.jpg
 email: 1320854122@qq.com
-description: "Every failure is leading towards success."
+description: "Every failure is leading towards success."#### 每一次失败都通向成功
 keyword: "BY, BY Blog, 陈志坤的博客, czkm, 陈志坤, js, JavaScript, vue"
 url: "http://czkm.github.io/"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -19,7 +19,7 @@ sidebar-avatar: img/avatar_m.jpg      # use absolute URL, seeing it's used in bo
 # SNS settings
 RSS: false
 # weibo_username:     
-zhihu_username:     
+zhihu_username:     橙汁土申
 github_username:    czkm
 facebook_username:  
 jianshu_username:   
