@@ -60,19 +60,20 @@ kramdown:
 # disqus_username: czkm
 
 # Gitalk
-# gitalk:
-#   enable: true    #是否开启Gitalk评论
-#   clientID: 6f80d858b2b9247231b3                            #生成的clientID
-#   clientSecret: 6dae4d34b33f24c467f7ae2d965adb24a81d9f1a    #生成的clientSecret
-#   repo: czkm.github.io    #仓库名称
-#   owner: czkm    #github用户名
-#   admin: czkm
-#   distractionFreeMode: true #是否启用类似FB的阴影遮罩
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: 294340dc563c6c494725                            #生成的clientID
+  clientSecret: 3d0dc1467f72773c62b842c943185694e1ce5238    #生成的clientSecret
+  repo: czkm.github.io    #仓库名称
+  owner: czkm    #github用户名
+  admin: czkm
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+  
 # gitalk Comments
 # gitalk:
 #   enable: true #是否开启
 #   githubID: czkm #你的Github用户名
-#   repo: https://github.com/czkm/czkm.github.io.git #Github仓库名称
+#   repo:  #Github仓库名称
 #   ClientID: 294340dc563c6c494725 #创建的Application ClientID
 #   ClientSecret: 3d0dc1467f72773c62b842c943185694e1ce5238 #创建的Application ClientSecret
 #   adminUser: czkm # 评论初始化账户(GitHub ID)
