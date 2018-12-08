@@ -6,7 +6,7 @@ email: 1320854122@qq.com
 description: "Every failure is leading towards success."
 keyword: "BY, BY Blog, 陈志坤的博客, czkm, 陈志坤, js, JavaScript, vue"
 url: "http://czkm.github.io/"          # your host, for absolute URL
-baseurl: "/blog"      # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "hhttps://github.com/czkm/czkm.github.io.git" # you code repository
 
 # Sidebar settings
