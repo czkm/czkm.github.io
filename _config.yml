@@ -11,7 +11,7 @@ github_repo: "https://github.com/czkm/czkm.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
+sidebar-about-description: "大爷，来玩啊!"
 sidebar-avatar: img/avatar_m.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -72,7 +72,7 @@ kramdown:
 gitalk:
   enable: true #是否开启
   githubID: czkm #你的Github用户名
-  repo: czlm.github.io #Github仓库名称
+  repo: czkm.github.io #Github仓库名称
   ClientID: 294340dc563c6c494725 #创建的Application ClientID
   ClientSecret: 3d0dc1467f72773c62b842c943185694e1ce5238 #创建的Application ClientSecret
   adminUser: czkm # 评论初始化账户(GitHub ID)
