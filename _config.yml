@@ -62,6 +62,7 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
+  githubID: czkm
   clientID: 294340dc563c6c494725                            #生成的clientID
   clientSecret: 3d0dc1467f72773c62b842c943185694e1ce5238    #生成的clientSecret
   repo: czkm.github.io    #仓库名称
