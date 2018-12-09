@@ -1,7 +1,7 @@
 # Site settings
 title: Hi This Is My blog
 SEOTitle: 陈志坤的博客 | BY Blog
-header-img: img/post-bg-desk.jpg
+header-img: img/my/bg1.jpg
 email: 1320854122@qq.com
 description: "Every failure is leading towards success."
 keyword: "BY, BY Blog, 陈志坤的博客, czkm, 陈志坤, "
@@ -12,7 +12,7 @@ github_repo: "https://github.com/czkm/czkm.github.io.git" # you code repository
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "大爷，来玩啊!"
-sidebar-avatar: img/my/author1.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/my/author1.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -60,15 +60,15 @@ kramdown:
 # disqus_username: czkm
 
 # Gitalk
-gitalk:
-  enable: true    #是否开启Gitalk评论
-  githubID: czkm
-  clientID: 294340dc563c6c494725                            #生成的clientID
-  clientSecret: 3d0dc1467f72773c62b842c943185694e1ce5238    #生成的clientSecret
-  repo: czkm.github.io    #仓库名称
-  owner: czkm    #github用户名
-  admin: czkm
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+# gitalk:
+#   enable: true    #是否开启Gitalk评论
+#   githubID: czkm
+#   clientID: 294340dc563c6c494725                            #生成的clientID
+#   clientSecret: 3d0dc1467f72773c62b842c943185694e1ce5238    #生成的clientSecret
+#   repo: czkm.github.io    #仓库名称
+#   owner: czkm    #github用户名
+#   admin: czkm
+#   distractionFreeMode: true #是否启用类似FB的阴影遮罩
   
 # gitalk Comments
 # gitalk:
