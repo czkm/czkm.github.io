@@ -104,10 +104,10 @@ friends: [
         title: "掘金",
         href: "https://juejin.im/user/5bbf26e05188255c352d7edf/posts"
     },
-# {
-#         title: "Ascotbe·BY",
-#         href: "https://ascotbe.github.io/"
-#     },
+{
+        title: "Ascotbe·BY",
+        href: "https://ascotbe.github.io/"
+    },
 {
         title: "vue",
         href: "https://cn.vuejs.org/"
