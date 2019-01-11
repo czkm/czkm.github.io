@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      关于elementui的组件封装
-subtitle:   使用 YYModel库 快速完成 JSON 转模型
-date:       2011-1-11
+subtitle:   提醒插件封装
+date:       2019-1-11
 author:     czk
 header-img: img/my/img1.jpg
 catalog: true
