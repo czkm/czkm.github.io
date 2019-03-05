@@ -2,7 +2,7 @@
 layout:     post
 title:      关于elementui的组件封装
 subtitle:   提醒插件封装
-date:       2019-1-11
+date:       2019-01-11
 author:     czk
 header-img: img/my/img1.jpg
 catalog: true
