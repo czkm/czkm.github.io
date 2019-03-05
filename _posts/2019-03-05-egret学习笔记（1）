@@ -6,7 +6,9 @@ date:       2019-03-05              # 时间
 author:     czk                      # 作者
 header-img: img/my/img2.jpg    #这篇文章标题背景图片
 catalog: true                       # 是否归档
-tags:                               #标签
+tags:  
+#标签
+    - js
     - egret
     - 前端
 ---
