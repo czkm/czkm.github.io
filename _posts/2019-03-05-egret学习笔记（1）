@@ -1,0 +1,134 @@
+---
+layout:     post                    # 使用的布局（不需要改）
+title:      egret学习笔记（1）       # 标题 
+subtitle:   记录学习egert相关        #副标题
+date:       2019-03-05              # 时间
+author:     czk                      # 作者
+header-img: img/my/img2.jpg    #这篇文章标题背景图片
+catalog: true                       # 是否归档
+tags:                               #标签
+    - egret
+    - 前端
+---
+
+
+
+
+
+## 仅记录自学egret过程，希望能帮助他人
+---
+#### 先记录几个常用的事件及基本概念
+
+![image](http://upload-images.jianshu.io/upload_images/15259843-f441be9c5c5b9972?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+**所有的对显示对象的操作均需要在egret引擎加载完皮肤后才能使用  在on_complete（）回调方法中操作**
+
+1.  “显示对象”，是可以在舞台上显示的对象。可以显示的对象，既包括可以直接看见的图形、文字、视频、图片等，也包括不能看见但真实存在的显示对象容器。在Egret中，视觉图形都是由显示对象和显示对象容器组成的。DisplayObject类是所有显示对象的父类，该类包含显示对象共有的属性与方法。
+*也可用egret.Point（x，y）在舞台上创建点对象*
+**总之在egret中若有你看得见的对象皆为显示对象，可用显示对象.x或者.y来确定他在舞台（显示屏幕）中的位置**
+> 显示对象.addChild ( )来在对象上添加显示对象/同理 removechild（ ）方法来移除对象
+
+2. TouchEvent的启动开关
+3
+TouchEvent的启动开关 touchEnabled 指定此对象是否接收触摸或其他用户输入。默认值为 false，实例将不接收任何触摸事件（或其他用户输入事件）如果要打开 **显示对象实例.touchEnabled = true;**
+
+* 监听函数定义
+```
+    public addEventListener(type:string, listener:Function, thisObject:any, useCapture:boolean = false,
+    priority:number = 0)
+```    
+
+> type：事件类型，必选。
+
+> listener：用来处理事件的侦听器，必选。
+
+> thisObject：作用域，必选，一般填写this。因为TypeScript与JavaScript的this作用域不同，其this指向也会不同。
+
+> useCapture: 确定侦听器是运行于捕获阶段还是运行于冒泡阶段，可选。设置为 true，则侦听器只在捕获阶段处理事件
+
+> priority： 事件侦听器的优先级，可选。优先级由一个带符号的整数指定。数字越大，优先级越高。优先级为 n 的所有侦听器会在优先级为 n -1 默认为 0。
+
+* 添加/移除监听
+```
+    事件发送者.addEventListener(事件类型, 侦听器, this);
+    事件发送者.removeEventListener(事件类型, 侦听器, this);
+```
+**流程: 事件->注册监听器->发送事件->监听事件->移除事件**
+* 如果监听事件的上一层有其它对象会被阻挡，要设置穿透
+* 
+![image](http://upload-images.jianshu.io/upload_images/15259843-4c4cfc469dadb9df?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+* 事件列表触发回调是call 相当于 
+```
+ cb.bind(this,this,1).call(this,evt)
+```
+
+![image](http://upload-images.jianshu.io/upload_images/15259843-44e29deb5f0b2ea9?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+3. 关于动画
+
+- 缓动动画
+#### 缓动动画是游戏中常见的一部分。例如界面弹出，道具飞入飞出的特效等等。Egret中的 Tween 缓动动画类提供了相关的功能。
+
+![image](http://upload-images.jianshu.io/upload_images/15259843-886b0f9a8f983aad?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+ ``` 
+ class TweenTest extends egret.DisplayObjectContainer{
+        public constructor(){
+            super();
+            this.addEventListener(egret.Event.ADDED_TO_STAGE,this.onAddToStage,this);
+        }
+        private onAddToStage(event:egret.Event){
+            var shp:egret.Shape = new egret.Shape();
+            shp.graphics.beginFill( 0x00ff00 );
+            shp.graphics.drawRect( 0, 0, 100, 100 );
+            shp.graphics.endFill();
+            shp.x = 50;
+            this.addChild( shp );
+            var tw = egret.Tween.get( shp );
+            tw.to( {x:150}, 1000 );
+        }
+    }
+```
+>缓动对象是用 Tween.get() 获得的，该方法需要传入用于缓动的目标对象，即例中的 shp ，然后通过 to() 方法给出需要设置缓动的具体参数。to() 的第一个参数用于设置缓动属性以及目标值：例中的属性为 x ，目标值为 150，即会将 shp 从当前 x 坐标位置缓动到 x 坐标为 150；to() 的第二个参数为缓动时间长度，单位为毫秒，例中的缓动长度为 1000毫秒，即 1 秒 。
+
+在 Tween 执行过程中，可能逻辑需要实时做一些变化。跟踪这个过程同样可以通过在 Tween.get() 的第二个参数中，加入变化事件处理函数的定义来实现。
+
+比如游戏中有猎物在做一个Tween运动过程中，猎人的枪口要实时瞄准，那么就需要在Tween的变化过程随时计算，修正猎人枪口的角度。
+
+举个简单的例子，log出变化的坐标：
+```
+    var obj = { x:0 };
+    var funcChange = function():void{
+        console.log( this.x );
+    }
+    egret.Tween.get( obj, { onChange:funcChange, onChangeObj:obj } )
+        .to( {x:600}, 1000 , egret.Ease.backInOut );
+```
+对于缓动的控制，可以设定若干其他方法。主要有以下两个：
+```
+    call() 在某个缓动过程结束时，可以用 call() 产生一个回调，直接将回调函数作为参数传给 call() 就可以了。
+
+    wait() 用于多个缓动连续设定中设置中间的等待时间，以毫秒为单位。
+```
+- MovieClip 
+MovieClip 工厂类为：MovieClipDataFactory。
+
+> 一个 MovieClip 工厂类对应一个MC资源合集。比如资源文件为 abc.json 和 abc.png。那么我们就可以在程序中把其解析到一个 MovieClip 工厂类：
+
+```（javascript）
+    var data = RES.getRes("abc.json");
+    var txtr = RES.getRes("abc.png");
+    var mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory( data, txtr );
+    var mc1:egret.MovieClip = new egret.MovieClip( mcFactory.generateMovieClipData( "run" ) );//获取动run
+        this.addChild( mc1 );//添加对象
+    mc1.gotoAndPlay( "start" ,3)//播放;
+```
+> 完成监听
+
+```
+    this.mc1.addEventListener(egret.Event.LOOP_COMPLETE, (e:egret.Event)=>{
+        console.log(e.type);//输出3次
+    }, this);
+    this.mc1.addEventListener(egret.Event.COMPLETE, (e:egret.Event)=>{
+        console.log(e.type);//1次
+    }, this);
+```
+
+#### 以上是我觉得学习egret需要知道的几个关键点
