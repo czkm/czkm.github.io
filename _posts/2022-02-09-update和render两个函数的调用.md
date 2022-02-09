@@ -1,10 +1,10 @@
 ---
 layout:     post                    # 使用的布局（不需要改）
-title:      Vue.js是如何让数据渲染成最终的DOM？（二）       # 标题 
+title:      update和render两个函数的调用       # 标题 
 subtitle:   _update和_render两个函数的调用 #副标题
 date:       2022-02-09             # 时间
 author:     czk                      # 作者
-header-img: img/my/img12.jpg    #这篇文章标题背景图片
+header-img: img/my/img14.jpg    #这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:  
 #标签
