@@ -99,20 +99,9 @@ service-worker: true
 
 
 # Friends
-friends: [
-    {
-        title: "掘金",
-        href: "https://juejin.im/user/5bbf26e05188255c352d7edf/posts"
-    },
-{
-        title: "Ascotbe·BY",
+friends: [ 
+  {
+        title: "Ascotbe",
         href: "https://ascotbe.github.io/"
-    },
-{
-        title: "vue",
-        href: "https://cn.vuejs.org/"
-    },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
-    }
+  }
 ]
