@@ -1,5 +1,19 @@
 
 
+---
+layout:     post                    # 使用的布局（不需要改）
+title:      如何用Js抓取Canvas做成Gif       # 标题 
+subtitle:  canvas gif #副标题
+date:       2023-05-08            # 时间
+author:     czk                      # 作者
+header-img: img/my/img18.jpg    #这篇文章标题背景图片
+catalog: true                       # 是否归档
+tags:  
+#标签
+    - js
+    
+---
+
 某天在网上冲浪🏄‍♀️时发现了一个页面如下
 
 ![图1_mjqtm9_.png](https://cdn.jsdelivr.net/gh/czkm/img-folder@master/gif-render/图1_mjqtm9_.png)
@@ -58,6 +72,7 @@ timer(15) // 15次
 ![图7_pxekpg_.png](https://cdn.jsdelivr.net/gh/czkm/img-folder@master/gif-render/图7_pxekpg_.png)
 
 
-![test 下午5.11.34_lha6ue_.gif](https://cdn.jsdelivr.net/gh/czkm/img-folder@master/gif-render/test 下午5.11.34_lha6ue_.gif)
+![test 下午5.11.34_lha6ue_.gif](https://github.com/czkm/img-folder/blob/main/gif-render/test%20%E4%B8%8B%E5%8D%885.11.34_lha6ue_.gif)
+
 
 如此你就可以获得一个由静态图片合成的gif，你可以自由编辑其帧率速度等等，简单分享下其实没有涉及到多高深技术
