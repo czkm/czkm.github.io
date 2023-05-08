@@ -1,9 +1,7 @@
-
-
 ---
 layout:     post                    # 使用的布局（不需要改）
 title:      如何用Js抓取Canvas做成Gif       # 标题 
-subtitle:  canvas gif #副标题
+subtitle:   Canvas J s#副标题
 date:       2023-05-08            # 时间
 author:     czk                      # 作者
 header-img: img/my/img18.jpg    #这篇文章标题背景图片
