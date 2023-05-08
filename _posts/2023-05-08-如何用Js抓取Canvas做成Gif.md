@@ -72,7 +72,6 @@ timer(15) // 15次
 ![图7_pxekpg_.png](https://cdn.jsdelivr.net/gh/czkm/img-folder@master/gif-render/图7_pxekpg_.png)
 
 
-![test 下午5.11.34_lha6ue_.gif](https://github.com/czkm/img-folder/blob/main/gif-render/test%20%E4%B8%8B%E5%8D%885.11.34_lha6ue_.gif)
-
+![test 下午5.11.34_lha6ue_.gif](https://raw.githubusercontent.com/czkm/img-folder/main/gif-render/test%20%E4%B8%8B%E5%8D%885.11.34_lha6ue_.gif)
 
 如此你就可以获得一个由静态图片合成的gif，你可以自由编辑其帧率速度等等，简单分享下其实没有涉及到多高深技术
